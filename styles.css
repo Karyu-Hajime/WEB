@@ -1,0 +1,107 @@
+/* Định dạng cho toàn bộ body, sử dụng flexbox để căn giữa nội dung */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Chiều cao toàn màn hình */
+    margin: 0; /* Xóa margin mặc định */
+    font-family: Arial, sans-serif; /* Font chữ mặc định */
+    background-color: #f0f0f0; /* Màu nền dự phòng */
+    /* Ảnh nền mặc định cho máy tính */
+    background-image: url('Anh/BG.jpg');
+    background-size: cover; /* Phủ kín toàn màn hình */
+    background-position: center; /* Căn giữa ảnh nền */
+    background-repeat: no-repeat; /* Không lặp lại ảnh */
+}
+
+/* Media query cho điện thoại (chiều rộng tối đa 768px) */
+@media only screen and (max-width: 768px) {
+    body {
+        /* Ảnh nền khác cho điện thoại */
+        background-image: url('Anh/BG1.jpg');
+    }
+}
+
+/* Định dạng cho hình ảnh chính, thêm transition để dịch chuyển mượt */
+img {
+    max-width: 300px; /* Chiều rộng tối đa 300px */
+    height: auto; /* Tự động điều chỉnh chiều cao để giữ tỷ lệ */
+    margin-bottom: 20px; /* Khoảng cách dưới ảnh */
+    transition: transform 0.2s; /* Hiệu ứng mượt khi dịch chuyển */
+}
+
+/* Định dạng cho tiêu đề h1, thêm transition để dịch chuyển mượt */
+h1 {
+    font-size: 2em; /* Kích thước chữ lớn */
+    margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
+    text-align: center; /* Căn giữa văn bản */
+    transition: transform 0.2s; /* Hiệu ứng mượt khi dịch chuyển */
+}
+
+/* Container cho các nút, sử dụng flexbox để tạo khoảng cách */
+.buttons {
+    display: flex;
+    gap: 20px; /* Khoảng cách giữa các nút */
+}
+
+/* Định dạng chung cho các nút */
+button {
+    padding: 10px 20px; /* Khoảng đệm bên trong */
+    font-size: 1.2em; /* Kích thước chữ */
+    cursor: pointer; /* Con trỏ chuột dạng bàn tay khi hover */
+    border: none; /* Xóa viền mặc định */
+    border-radius: 5px; /* Bo góc nút */
+    transition: transform 0.2s; /* Hiệu ứng mượt khi thay đổi kích thước hoặc vị trí */
+}
+
+/* Định dạng riêng cho nút "Có" */
+#yesBtn {
+    background-color: #4CAF50; /* Màu xanh lá */
+    color: white; /* Chữ màu trắng */
+}
+
+/* Định dạng riêng cho nút "Không" */
+#noBtn {
+    background-color: #f44336; /* Màu đỏ */
+    color: white; /* Chữ màu trắng */
+}
+
+/* Hiệu ứng rung cho nút "Không" khi được kích hoạt */
+.shake {
+    animation: shake 0.5s; /* Áp dụng animation rung trong 0.5 giây */
+    transform: scale(1.2); /* Phóng to 1.2 lần */
+}
+
+/* Định nghĩa keyframes cho hiệu ứng rung */
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px )rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+/* Định dạng cho container đáp án */
+.answer {
+    text-align: center; /* Căn giữa nội dung */
+}
+
+/* Định dạng cho hình ảnh đáp án */
+#answerImage {
+    max-width: 400px; /* Chiều rộng tối đa lớn hơn ảnh chính */
+    height: auto; /* Tự động điều chỉnh chiều cao */
+    margin-bottom: 20px; /* Khoảng cách dưới ảnh */
+}
+
+/* Định dạng cho văn bản đáp án */
+#answerText {
+    font-size: 1.5em; /* Kích thước chữ cho đáp án */
+    color: #333; /* Màu chữ tối */
+}

@@ -1,0 +1,40 @@
+<!-- Khai báo loại tài liệu HTML5 -->
+<!DOCTYPE html>
+<!-- Thẻ html với thuộc tính lang chỉ định ngôn ngữ là tiếng Việt -->
+<html lang="vi">
+<head>
+    <!-- Thiết lập bộ mã hóa ký tự UTF-8 để hỗ trợ tiếng Việt -->
+    <meta charset="UTF-8">
+    <!-- Đảm bảo hiển thị responsive trên các thiết bị -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tiêu đề của trang web hiển thị trên thanh tiêu đề trình duyệt -->
+    <title>Trang Web Hỏi Đáp Động</title>
+    <!-- Liên kết đến file CSS bên ngoài để định dạng giao diện -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hình ảnh hiển thị ở giữa, URL và vị trí sẽ được thay đổi động -->
+    <img id="image" src="Anh/A10.webp" alt="Hình ảnh">
+    <!-- Tiêu đề h1 hiển thị câu hỏi, nội dung và vị trí sẽ được thay đổi động -->
+    <h1 id="question">MÀY CÓ NGU KHÔNG?</h1>
+    <!-- Container cho hai nút, sử dụng class để định dạng -->
+    <div class="buttons" id="buttons">
+        <!-- Nút "Có" với id để xử lý sự kiện và thay đổi kích thước -->
+        <button id="yesBtn">TẤT NHIÊN</button>
+        <!-- Nút "Không" với id để xử lý sự kiện và dịch chuyển -->
+        <button id="noBtn">ĐÉO NHÉ</button>
+    </div>
+    <!-- Container cho đáp án khi nhấn nút "Có", mặc định ẩn -->
+    <div id="answer" class="answer" style="display: none;">
+        <!-- Hình ảnh đáp án, sẽ được cập nhật khi nhấn "Có" -->
+        <img id="answerImage" src="" alt="Hình ảnh đáp án">
+        <!-- Đáp án văn bản, sẽ được cập nhật khi nhấn "Có" -->
+        <h2 id="answerText"></h2>
+    </div>
+    <!-- Thẻ audio chứa tệp MP3, sẽ được phát khi nhấn nút "Không" -->
+    <audio id="sound" src="sound/vit.mp3"></audio>
+    <audio id="sound1" src="sound/sad.mp3"></audio>
+    <!-- Liên kết đến file JavaScript bên ngoài để xử lý logic -->
+    <script src="script.js"></script>
+</body>
+</html>
